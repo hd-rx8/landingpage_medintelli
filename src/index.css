@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 155 40% 10%; /* Dark Green/Gray text */
+ 
+    --card: 0 0% 100%;
+    --card-foreground: 155 40% 10%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 40% 10%;
+ 
+    /* Emerald / Medical Green Palette */
+    --primary: 155 80% 35%; /* Deep Emerald */
+    --primary-foreground: 0 0% 100%;
+ 
+    --secondary: 150 30% 96%; /* Very light green hint */
+    --secondary-foreground: 155 40% 20%;
+ 
+    --muted: 210 20% 96%; /* Light Gray */
+    --muted-foreground: 215 20% 40%;
+ 
+    --accent: 155 60% 90%; /* Light Green Accent */
+    --accent-foreground: 155 80% 30%;
+ 
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 155 80% 35%;
+ 
+    --radius: 0.75rem;
+  }
+ 
+  .dark {
+    --background: 155 50% 3%;
+    --foreground: 150 20% 98%;
+ 
+    --card: 155 50% 5%;
+    --card-foreground: 150 20% 98%;
+ 
+    --popover: 155 50% 5%;
+    --popover-foreground: 150 20% 98%;
+ 
+    --primary: 155 70% 50%;
+    --primary-foreground: 155 60% 5%;
+ 
+    --secondary: 155 30% 10%;
+    --secondary-foreground: 150 20% 98%;
+ 
+    --muted: 155 30% 10%;
+    --muted-foreground: 150 20% 65%;
+ 
+    --accent: 155 30% 10%;
+    --accent-foreground: 150 20% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 150 20% 98%;
+ 
+    --border: 155 30% 10%;
+    --input: 155 30% 10%;
+    --ring: 155 70% 50%;
+  }
+}
+ 
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+.glass-panel {
+  @apply backdrop-blur-md bg-white/70 border border-emerald-100 shadow-lg dark:bg-emerald-950/30 dark:border-emerald-800;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300;
+}
